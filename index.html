@@ -42,5 +42,574 @@ Error generating stack: `+e.message+`
 === MATERIALES ===`,...e.checks.map(e=>`[${e.done?`X`:` `}] (${e.category}) ${e.label}`),`\n=== FESTIVALES (${e.festivals.length}) ===`,...e.festivals.map(e=>`[${e.status.toUpperCase()}] ${e.name} | Deadline: ${e.deadline} | Fee: ${e.fee}${e.premiere?` | PREMIERE`:``}${e.notes?` | ${e.notes}`:``}`)].join(`
 `);Object.assign(document.createElement(`a`),{href:URL.createObjectURL(new Blob([n],{type:`text/plain`})),download:`checklist-${e.name||`proyecto`}.txt`}).click()};return(0,f.jsx)(`section`,{id:`checklist`,className:`section-anchor`,style:{padding:`clamp(48px,8vw,80px) 0`},children:(0,f.jsxs)(`div`,{className:`section-wrap`,children:[(0,f.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,gap:12,marginBottom:16},children:[(0,f.jsx)(`span`,{style:{fontFamily:`Space Mono, monospace`,fontSize:15,color:`var(--violet-glow)`,letterSpacing:`0.1em`},children:`10 —`}),(0,f.jsx)(`h2`,{style:{fontSize:`clamp(26px, 4vw, 40px)`,fontWeight:700},children:`Checklist interactiva de tu cortometraje`})]}),(0,f.jsx)(`p`,{style:{color:`var(--text-secondary)`,marginBottom:8,maxWidth:640,fontSize:15},children:`Registra tu proyecto, gestiona festivales, marca tareas y exporta tu ruta personalizada. El progreso se guarda automáticamente en tu navegador.`}),(0,f.jsx)(`div`,{style:{fontSize:16,color:`var(--text-muted)`,marginBottom:32,fontFamily:`Space Mono, monospace`},children:`30 puntos de verificación · Basado en la checklist institucional LAED · UDEM`}),(0,f.jsxs)(`div`,{style:{marginBottom:24,background:`var(--card)`,border:`1px solid var(--border)`,borderRadius:12,padding:`20px 24px`},children:[(0,f.jsxs)(`div`,{style:{display:`flex`,justifyContent:`space-between`,marginBottom:10},children:[(0,f.jsxs)(`div`,{style:{fontSize:18,fontWeight:600},children:[e.name||`Sin nombre`,` — Preparación de materiales`]}),(0,f.jsxs)(`div`,{style:{fontSize:20,fontWeight:700,fontFamily:`Space Grotesk`,color:h>=80?`#34d399`:h>=50?`#fbbf24`:`#f43f5e`},children:[h,`%`]})]}),(0,f.jsx)(`div`,{className:`progress-bar`,children:(0,f.jsx)(`div`,{className:`progress-fill`,style:{width:`${h}%`,background:h>=80?`#34d399`:h>=50?`linear-gradient(90deg, #f59e0b, #34d399)`:`linear-gradient(90deg, #f43f5e, #f59e0b)`}})}),(0,f.jsxs)(`div`,{style:{display:`flex`,gap:20,marginTop:10,fontSize:16,color:`var(--text-muted)`,flexWrap:`wrap`},children:[(0,f.jsxs)(`span`,{children:[`✓ `,e.checks.filter(e=>e.done).length,` completados`]}),(0,f.jsxs)(`span`,{children:[`○ `,e.checks.filter(e=>!e.done).length,` pendientes`]}),(0,f.jsxs)(`span`,{children:[`🎬 `,e.festivals.length,` festivales en ruta`]}),(0,f.jsxs)(`span`,{style:{color:`#34d399`},children:[`🎉 `,e.festivals.filter(e=>e.status===`seleccionado`).length,` selecciones`]})]})]}),(0,f.jsx)(`div`,{style:{display:`flex`,gap:0,marginBottom:24,borderBottom:`1px solid var(--border)`},children:[`project`,`checklist`,`festivals`].map(e=>(0,f.jsx)(`button`,{onClick:()=>s(e),style:{padding:`10px 20px`,fontSize:18,fontWeight:600,fontFamily:`Space Grotesk, sans-serif`,cursor:`pointer`,border:`none`,background:`none`,color:o===e?`var(--text-primary)`:`var(--text-muted)`,borderBottom:`2px solid ${o===e?`var(--violet)`:`transparent`}`,marginBottom:-1},children:e===`project`?`📋 Mi Proyecto`:e===`checklist`?`✅ Materiales`:`🎬 Festivales`},e))}),o===`project`&&(0,f.jsxs)(`div`,{className:`card-base`,children:[(0,f.jsx)(`h3`,{style:{fontSize:19,fontWeight:600,marginBottom:20},children:`Datos del proyecto`}),(0,f.jsxs)(`div`,{style:{display:`grid`,gridTemplateColumns:`repeat(auto-fit, minmax(min(220px,100%), 1fr))`,gap:16,marginBottom:20},children:[[{label:`Nombre del proyecto *`,key:`name`,type:`text`,placeholder:`Ej: La Sombra de Sofía`},{label:`Duración`,key:`duration`,type:`text`,placeholder:`Ej: 7 min 30 seg`},{label:`País / Idioma`,key:`language`,type:`text`,placeholder:`Ej: México / Español`}].map(t=>(0,f.jsxs)(`div`,{children:[(0,f.jsx)(`label`,{style:{display:`block`,fontSize:15,color:`var(--text-muted)`,fontFamily:`Space Mono, monospace`,letterSpacing:`0.06em`,marginBottom:6},children:t.label.toUpperCase()}),(0,f.jsx)(`input`,{type:`text`,className:`input-base`,placeholder:t.placeholder,value:e[t.key],onChange:e=>c({[t.key]:e.target.value})})]},t.key)),(0,f.jsxs)(`div`,{children:[(0,f.jsx)(`label`,{style:{display:`block`,fontSize:15,color:`var(--text-muted)`,fontFamily:`Space Mono, monospace`,letterSpacing:`0.06em`,marginBottom:6},children:`TÉCNICA`}),(0,f.jsx)(`select`,{className:`input-base`,value:e.technique,onChange:e=>c({technique:e.target.value}),children:[`2D`,`3D`,`Stop Motion`,`Experimental`,`Mixta`,`Motion Design`,`VFX`,`Realtime`].map(e=>(0,f.jsx)(`option`,{value:e,children:e},e))})]}),(0,f.jsxs)(`div`,{children:[(0,f.jsx)(`label`,{style:{display:`block`,fontSize:15,color:`var(--text-muted)`,fontFamily:`Space Mono, monospace`,letterSpacing:`0.06em`,marginBottom:6},children:`ESTATUS DEL CORTO`}),(0,f.jsx)(`select`,{className:`input-base`,value:e.status,onChange:e=>c({status:e.target.value}),children:[{v:`en-produccion`,l:`En producción`},{v:`post-produccion`,l:`En post-producción`},{v:`listo`,l:`Listo para inscribir`},{v:`en-ruta`,l:`En ruta de festivales`},{v:`cerrado`,l:`Ruta cerrada`}].map(e=>(0,f.jsx)(`option`,{value:e.v,children:e.l},e.v))})]})]}),(0,f.jsxs)(`div`,{style:{display:`flex`,gap:10,flexWrap:`wrap`},children:[(0,f.jsx)(`button`,{className:`btn-primary`,onClick:()=>s(`checklist`),children:`Ir a materiales →`}),(0,f.jsx)(`button`,{className:`btn-ghost`,onClick:v,children:`↓ Exportar resumen .TXT`}),(0,f.jsx)(`button`,{className:`btn-ghost`,onClick:_,children:`↓ Exportar festivales .CSV`}),(0,f.jsx)(`button`,{style:{padding:`10px 14px`,borderRadius:8,background:`rgba(244,63,94,0.1)`,border:`1px solid rgba(244,63,94,0.3)`,color:`#fb7185`,fontSize:15,cursor:`pointer`,fontFamily:`DM Sans, sans-serif`},onClick:()=>{confirm(`¿Reiniciar el proyecto? Se perderán todos los datos guardados.`)&&t({...fe,checks:T.map(e=>({...e,done:!1}))})},children:`↺ Reiniciar proyecto`})]})]}),o===`checklist`&&(0,f.jsxs)(`div`,{children:[g.map(t=>{let n=e.checks.filter(e=>e.category===t),r=n.filter(e=>e.done).length;return(0,f.jsxs)(`div`,{className:`card-base`,style:{marginBottom:14},children:[(0,f.jsxs)(`div`,{style:{display:`flex`,justifyContent:`space-between`,alignItems:`center`,marginBottom:12},children:[(0,f.jsx)(`h4`,{style:{fontSize:17,fontWeight:600,fontFamily:`Space Mono, monospace`,color:`var(--violet-glow)`,letterSpacing:`0.06em`},children:t.toUpperCase()}),(0,f.jsxs)(`span`,{style:{fontSize:16,color:r===n.length?`#34d399`:`var(--text-muted)`,fontFamily:`Space Mono, monospace`},children:[r,`/`,n.length]})]}),n.map(e=>(0,f.jsxs)(`div`,{className:`check-item ${e.done?`done`:``}`,onClick:()=>u(e.id),children:[(0,f.jsx)(`div`,{className:`check-box ${e.done?`checked`:``}`,children:e.done&&(0,f.jsx)(`span`,{style:{color:`white`,fontSize:16},children:`✓`})}),(0,f.jsx)(`span`,{style:{fontSize:16,lineHeight:1.4},children:e.label})]},e.id))]},t)}),(0,f.jsx)(`div`,{style:{marginTop:16,display:`flex`,gap:10},children:(0,f.jsx)(`button`,{className:`btn-ghost`,onClick:v,children:`↓ Exportar checklist completo`})})]}),o===`festivals`&&(0,f.jsxs)(`div`,{children:[(0,f.jsx)(`div`,{style:{marginBottom:20},children:(0,f.jsx)(`button`,{className:`btn-primary`,onClick:()=>r(!n),children:n?`✕ Cancelar`:`+ Agregar festival`})}),n&&(0,f.jsxs)(`div`,{className:`card-base`,style:{marginBottom:20,borderTop:`3px solid var(--violet)`},children:[(0,f.jsx)(`h4`,{style:{fontSize:17,fontWeight:600,marginBottom:16},children:`Nuevo festival`}),(0,f.jsx)(`div`,{style:{display:`grid`,gridTemplateColumns:`repeat(auto-fit, minmax(min(200px,100%), 1fr))`,gap:12,marginBottom:14},children:[{label:`Nombre del festival *`,key:`name`,placeholder:`Ej: Annecy IAFF`},{label:`Deadline`,key:`deadline`,placeholder:`Ej: 15 octubre 2025`},{label:`Fee de inscripción`,key:`fee`,placeholder:`Ej: €25 o Gratis`},{label:`Notas`,key:`notes`,placeholder:`Categoría, nivel, requisitos...`}].map(e=>(0,f.jsxs)(`div`,{children:[(0,f.jsx)(`label`,{style:{display:`block`,fontSize:15,color:`var(--text-muted)`,fontFamily:`Space Mono, monospace`,letterSpacing:`0.06em`,marginBottom:5},children:e.label.toUpperCase()}),(0,f.jsx)(`input`,{className:`input-base`,placeholder:e.placeholder,value:i[e.key],onChange:t=>a(n=>({...n,[e.key]:t.target.value}))})]},e.key))}),(0,f.jsxs)(`label`,{style:{display:`flex`,gap:8,alignItems:`center`,cursor:`pointer`,fontSize:16,color:`var(--text-secondary)`,marginBottom:14},children:[(0,f.jsx)(`input`,{type:`checkbox`,checked:i.premiere,onChange:e=>a(t=>({...t,premiere:e.target.checked}))}),`¿Requiere premiere (mundial / regional / nacional)?`]}),(0,f.jsx)(`button`,{className:`btn-primary`,onClick:d,children:`Agregar a mi ruta`})]}),e.festivals.length===0?(0,f.jsxs)(`div`,{style:{textAlign:`center`,padding:`48px 24px`,color:`var(--text-muted)`},children:[(0,f.jsx)(`div`,{style:{fontSize:40,marginBottom:12},children:`🎬`}),(0,f.jsx)(`div`,{style:{fontSize:16,marginBottom:6},children:`Tu ruta de festivales está vacía`}),(0,f.jsx)(`div`,{style:{fontSize:15},children:`Usa el botón de arriba para comenzar a registrar festivales`})]}):(0,f.jsxs)(`div`,{children:[(0,f.jsx)(`div`,{style:{display:`flex`,flexDirection:`column`,gap:10,marginBottom:16},children:e.festivals.map(e=>(0,f.jsx)(`div`,{className:`card-base`,style:{borderLeft:`3px solid ${E[e.status]}`},children:(0,f.jsxs)(`div`,{style:{display:`flex`,flexWrap:`wrap`,justifyContent:`space-between`,gap:12},children:[(0,f.jsxs)(`div`,{style:{flex:1,minWidth:200},children:[(0,f.jsxs)(`div`,{style:{display:`flex`,gap:8,alignItems:`center`,flexWrap:`wrap`,marginBottom:6},children:[(0,f.jsx)(`span`,{style:{fontSize:17,fontWeight:600,color:`var(--text-primary)`},children:e.name}),e.premiere&&(0,f.jsx)(`span`,{style:{background:`rgba(244,63,94,0.15)`,color:`#fb7185`,fontSize:15,padding:`2px 6px`,borderRadius:4,fontFamily:`Space Mono, monospace`},children:`PREMIERE`})]}),(0,f.jsxs)(`div`,{style:{display:`flex`,gap:16,fontSize:16,color:`var(--text-muted)`,flexWrap:`wrap`},children:[e.deadline&&(0,f.jsxs)(`span`,{children:[`📅 `,e.deadline]}),e.fee&&(0,f.jsxs)(`span`,{children:[`💳 `,e.fee]}),e.notes&&(0,f.jsxs)(`span`,{children:[`📝 `,e.notes]})]})]}),(0,f.jsxs)(`div`,{style:{display:`flex`,gap:8,alignItems:`flex-start`},children:[(0,f.jsx)(`select`,{style:{background:`var(--deep)`,border:`1px solid ${E[e.status]}`,borderRadius:8,padding:`6px 10px`,fontSize:16,color:E[e.status],fontFamily:`Space Grotesk, sans-serif`,cursor:`pointer`,outline:`none`},value:e.status,onChange:t=>p(e.id,t.target.value),children:Object.entries(de).map(([e,t])=>(0,f.jsx)(`option`,{value:e,style:{color:`var(--text-primary)`,background:`var(--deep)`},children:t},e))}),(0,f.jsx)(`button`,{onClick:()=>m(e.id),style:{background:`rgba(244,63,94,0.1)`,border:`1px solid rgba(244,63,94,0.3)`,borderRadius:8,padding:`6px 10px`,color:`#fb7185`,fontSize:16,cursor:`pointer`},children:`✕`})]})]})},e.id))}),(0,f.jsxs)(`div`,{style:{display:`flex`,gap:10},children:[(0,f.jsx)(`button`,{className:`btn-ghost`,onClick:_,children:`↓ Exportar CSV`}),(0,f.jsx)(`button`,{className:`btn-ghost`,onClick:v,children:`↓ Exportar resumen TXT`})]})]})]}),(0,f.jsxs)(`div`,{style:{marginTop:48,background:`linear-gradient(135deg, rgba(109,40,217,0.08), rgba(37,99,235,0.06))`,border:`1px solid rgba(109,40,217,0.2)`,borderRadius:14,padding:`28px 32px`},children:[(0,f.jsx)(`h4`,{style:{fontSize:19,fontWeight:600,marginBottom:16},children:`📌 Recomendaciones finales`}),(0,f.jsx)(`div`,{style:{display:`grid`,gridTemplateColumns:`repeat(auto-fit, minmax(min(260px,100%), 1fr))`,gap:14},children:[`No todos los cortos deben seguir la misma ruta. Cada proyecto necesita una estrategia distinta.`,`La ruta debe empezar por festivales de mayor prestigio cuando el proyecto tenga el nivel y la elegibilidad adecuada.`,`Los festivales nacionales y latinoamericanos son clave para posicionamiento, comunidad y prensa institucional.`,`Los festivales estudiantiles ayudan a formar criterio, experiencia y motivación.`,`Los festivales de nicho pueden ser más efectivos cuando el corto tiene una identidad temática o técnica muy clara.`,`La publicación pública debe planearse al final, no al inicio de la ruta.`].map((e,t)=>(0,f.jsxs)(`div`,{style:{display:`flex`,gap:10,fontSize:17,color:`var(--text-secondary)`,lineHeight:1.6},children:[(0,f.jsxs)(`span`,{style:{color:`var(--violet-glow)`,fontFamily:`Space Mono, monospace`,fontSize:15,marginTop:2},children:[`0`,t+1]}),e]},t))})]})]})})}function me(){return(0,f.jsx)(`footer`,{style:{borderTop:`1px solid var(--border)`,padding:`48px 0 32px`,background:`var(--void)`},children:(0,f.jsxs)(`div`,{className:`section-wrap`,children:[(0,f.jsxs)(`div`,{style:{display:`grid`,gridTemplateColumns:`repeat(auto-fit, minmax(min(200px,100%), 1fr))`,gap:32,marginBottom:40},children:[(0,f.jsxs)(`div`,{children:[(0,f.jsxs)(`div`,{style:{display:`flex`,alignItems:`center`,gap:10,marginBottom:12},children:[(0,f.jsx)(`div`,{style:{width:32,height:32,borderRadius:8,background:`linear-gradient(135deg, #6d28d9, #f43f5e)`,display:`flex`,alignItems:`center`,justifyContent:`center`,fontSize:16,fontWeight:700,color:`white`,fontFamily:`Space Mono, monospace`},children:`F`}),(0,f.jsx)(`div`,{style:{fontSize:16,fontWeight:700,fontFamily:`Space Grotesk, sans-serif`},children:`Ruta de Festivales`})]}),(0,f.jsx)(`p`,{style:{fontSize:15,color:`var(--text-muted)`,lineHeight:1.6,maxWidth:240},children:`Guía oficial para alumnos de la Licenciatura en Animación y Efectos Digitales, UDEM. Desarrollada para acompañar el proceso completo de distribución en festivales.`})]}),(0,f.jsxs)(`div`,{children:[(0,f.jsx)(`div`,{style:{fontSize:15,fontFamily:`Space Mono, monospace`,color:`var(--text-muted)`,letterSpacing:`0.08em`,marginBottom:12},children:`SECCIONES`}),[`Introducción`,`Tipos de festivales`,`Criterios de selección`,`Ruta UDEM`,`Preparación`].map(e=>(0,f.jsx)(`div`,{style:{fontSize:17,color:`var(--text-secondary)`,padding:`4px 0`},children:e},e))]}),(0,f.jsxs)(`div`,{children:[(0,f.jsx)(`div`,{style:{fontSize:15,fontFamily:`Space Mono, monospace`,color:`var(--text-muted)`,letterSpacing:`0.08em`,marginBottom:12},children:`MÁS`}),[`Estrategia de inscripción`,`Errores comunes`,`Recursos y enlaces`,`Ejemplos prácticos`,`Checklist interactiva`].map(e=>(0,f.jsx)(`div`,{style:{fontSize:17,color:`var(--text-secondary)`,padding:`4px 0`},children:e},e))]}),(0,f.jsxs)(`div`,{children:[(0,f.jsx)(`div`,{style:{fontSize:15,fontFamily:`Space Mono, monospace`,color:`var(--text-muted)`,letterSpacing:`0.08em`,marginBottom:12},children:`ACCESO RÁPIDO`}),[{name:`FilmFreeway`,url:`https://filmfreeway.com`},{name:`Pixelatl`,url:`https://pixelatl.com`},{name:`Annecy IAFF`,url:`https://www.annecy.org`},{name:`Student Oscar`,url:`https://www.oscars.org/student-academy-awards`},{name:`Quirino Awards`,url:`https://quirino.net`}].map(e=>(0,f.jsxs)(`a`,{href:e.url,target:`_blank`,rel:`noopener noreferrer`,style:{display:`block`,fontSize:15,color:`var(--royal-light)`,padding:`4px 0`,textDecoration:`none`},children:[e.name,` ↗`]},e.name))]})]}),(0,f.jsxs)(`div`,{style:{borderTop:`1px solid var(--border)`,paddingTop:24,display:`flex`,flexWrap:`wrap`,justifyContent:`space-between`,gap:12},children:[(0,f.jsx)(`div`,{style:{fontSize:16,color:`var(--text-muted)`},children:`© 2025 · Licenciatura en Animación y Efectos Digitales (LAED) · UDEM · Monterrey, México`}),(0,f.jsx)(`div`,{style:{fontSize:16,color:`var(--text-muted)`},children:`Guía educativa para uso interno de alumnos · Todos los derechos reservados`})]})]})})}function D(){return(0,f.jsxs)(f.Fragment,{children:[(0,f.jsx)(m,{}),(0,f.jsxs)(`main`,{children:[(0,f.jsx)(h,{}),(0,f.jsx)(g,{}),(0,f.jsx)(v,{}),(0,f.jsx)(ee,{}),(0,f.jsx)(te,{}),(0,f.jsx)(re,{}),(0,f.jsx)(w,{}),(0,f.jsx)(ae,{}),(0,f.jsx)(se,{}),(0,f.jsx)(le,{}),(0,f.jsx)(ue,{}),(0,f.jsx)(pe,{})]}),(0,f.jsx)(me,{})]})}(0,u.createRoot)(document.getElementById(`root`)).render((0,f.jsx)(l.StrictMode,{children:(0,f.jsx)(D,{})}));
     </script>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CALENDARIO DE FESTIVALES v2 — Sección adicional LAED UDEM
+       Inyectado sin modificar el contenido ni JS existente
+  ═══════════════════════════════════════════════════════════════ -->
+  <style>
+  /* ─ Reset & base ─────────────────────────────────────────── */
+  #cal{background:#0d0d14;border-top:1px solid #2a2a45;padding:clamp(48px,8vw,80px) 0;font-family:'DM Sans',sans-serif;color:#f8f8ff;-webkit-font-smoothing:antialiased}
+  .cw{max-width:1200px;margin:0 auto;padding:0 32px}
+  @media(max-width:600px){.cw{padding:0 16px}#cal{padding:48px 0}}
+
+  /* ─ Header strip ─────────────────────────────────────────── */
+  #cal .eyebrow{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;color:#7c3aed;text-transform:uppercase;margin-bottom:6px}
+  #cal h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,4vw,40px);font-weight:700;letter-spacing:-.02em;margin:0 0 12px}
+  #cal .lead{color:#c4c4dc;font-size:17px;max-width:640px;line-height:1.65;margin:0 0 32px}
+
+  /* ─ Urgency banner ───────────────────────────────────────── */
+  #cal-urgent{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+  .urg-chip{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border-radius:9px;font-size:13px;font-weight:600;font-family:'Space Grotesk',sans-serif;cursor:pointer;transition:transform .15s;border:none;background:#1e1e32;border:1px solid #2a2a45;color:#f8f8ff;text-align:left}
+  .urg-chip:hover{transform:translateY(-1px);border-color:#3a3a5c}
+  .urg-chip .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .urg-chip .name{font-weight:600;font-size:13px}
+  .urg-chip .when{font-size:11px;color:#7a7a9a;font-family:'Space Mono',monospace;margin-top:1px}
+  .urg-chip.deadline{border-color:rgba(244,63,94,.3);background:rgba(244,63,94,.06)}
+
+  /* ─ Toolbar ──────────────────────────────────────────────── */
+  #cal-toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+  .cal-search{flex:1;min-width:180px;background:#12121e;border:1px solid #2a2a45;border-radius:9px;padding:10px 14px 10px 38px;color:#f8f8ff;font-size:15px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .15s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%237a7a9a' stroke-width='1.5' stroke-linecap='round'%3E%3Ccircle cx='7' cy='7' r='4'/%3E%3Cpath d='m11 11 3 3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:12px center}
+  .cal-search:focus{border-color:#6d28d9}
+  .cal-search::placeholder{color:#7a7a9a}
+  .vtab{display:inline-flex;align-items:center;gap:5px;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:600;font-family:'Space Grotesk',sans-serif;cursor:pointer;border:1px solid #2a2a45;background:transparent;color:#7a7a9a;transition:all .15s;white-space:nowrap}
+  .vtab:hover{border-color:#3a3a5c;color:#f8f8ff}
+  .vtab.on{background:rgba(109,40,217,.18);border-color:#6d28d9;color:#f8f8ff}
+
+  /* ─ Filter chips row ─────────────────────────────────────── */
+  #cal-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+  .chip{display:inline-flex;align-items:center;gap:4px;padding:5px 12px;border-radius:100px;font-size:12px;font-weight:600;font-family:'Space Mono',monospace;cursor:pointer;border:1px solid #2a2a45;background:transparent;color:#7a7a9a;transition:all .15s;letter-spacing:.04em;white-space:nowrap}
+  .chip:hover{color:#f8f8ff;border-color:#3a3a5c}
+  .chip.on{color:#fff;border-color:transparent}
+
+  /* ─ Quick-stats row ──────────────────────────────────────── */
+  #cal-stats{display:flex;gap:0;margin-bottom:20px;background:#12121e;border:1px solid #2a2a45;border-radius:10px;overflow:hidden;flex-wrap:wrap}
+  .cstat{flex:1;min-width:120px;padding:12px 18px;border-right:1px solid #2a2a45;font-size:13px;color:#7a7a9a}
+  .cstat:last-child{border-right:none}
+  .cstat strong{display:block;font-size:22px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:#f8f8ff;line-height:1.2;margin-bottom:2px}
+  @media(max-width:600px){.cstat{min-width:50%;border-right:none;border-bottom:1px solid #2a2a45}.cstat:last-child{border-bottom:none}}
+
+  /* ─ Status pills ─────────────────────────────────────────── */
+  .stpill{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:100px;font-size:11px;font-weight:700;font-family:'Space Mono',monospace;letter-spacing:.04em}
+  .st-open{background:rgba(16,185,129,.14);color:#34d399;border:1px solid rgba(16,185,129,.28)}
+  .st-close{background:rgba(107,107,141,.12);color:#7a7a9a;border:1px solid rgba(107,107,141,.25)}
+  .st-soon{background:rgba(244,63,94,.12);color:#fb7185;border:1px solid rgba(244,63,94,.28)}
+  .st-check{background:rgba(37,99,235,.12);color:#60a5fa;border:1px solid rgba(37,99,235,.28)}
+
+  /* ─ Level badge ──────────────────────────────────────────── */
+  .lbadge{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:5px;font-size:11px;font-weight:700;font-family:'Space Mono',monospace;flex-shrink:0}
+
+  /* ─ GRID VIEW ────────────────────────────────────────────── */
+  .cal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:14px}
+  .ccard{background:#1e1e32;border:1px solid #2a2a45;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:10px;transition:transform .15s,border-color .15s;cursor:default}
+  .ccard:hover{transform:translateY(-2px);border-color:#3a3a5c}
+  .ccard.starred{border-color:rgba(245,158,11,.35)}
+  .ccard-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+  .ccard-name{font-size:15px;font-weight:700;font-family:'Space Grotesk',sans-serif;line-height:1.3;flex:1}
+  .ccard-name a{color:inherit;text-decoration:none;transition:color .15s}
+  .ccard-name a:hover{color:#60a5fa}
+  .ccard-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .ccard-tags{display:flex;flex-wrap:wrap;gap:5px}
+  .ctag{padding:3px 8px;border-radius:4px;font-size:11px;font-family:'Space Mono',monospace;font-weight:600}
+  .ccard-footer{display:flex;justify-content:space-between;align-items:center;gap:8px;padding-top:8px;border-top:1px solid #2a2a45}
+  .ccard-dl{font-size:11px;font-family:'Space Mono',monospace;color:#7a7a9a}
+  .ccard-dl.soon{color:#fb7185;font-weight:700}
+  .ccard-note{font-size:12px;color:#c4c4dc;line-height:1.5;padding-top:8px;border-top:1px solid #2a2a45}
+  .star-btn{background:none;border:none;cursor:pointer;font-size:16px;padding:2px 3px;transition:transform .15s,opacity .15s;opacity:.4;line-height:1;color:#f59e0b}
+  .star-btn:hover,.star-btn.on{opacity:1;transform:scale(1.2)}
+  .add-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;font-family:'Space Mono',monospace;cursor:pointer;border:1px solid #2a2a45;background:transparent;color:#7a7a9a;transition:all .15s;white-space:nowrap}
+  .add-btn:hover{border-color:#6d28d9;color:#a78bfa}
+  .add-btn.on{background:rgba(109,40,217,.15);border-color:#6d28d9;color:#a78bfa}
+
+  /* ─ LIST VIEW ────────────────────────────────────────────── */
+  .cal-list{display:flex;flex-direction:column;gap:6px}
+  .crow{background:#1e1e32;border:1px solid #2a2a45;border-radius:10px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr auto auto auto auto;align-items:center;gap:12px;transition:border-color .15s}
+  .crow:hover{border-color:#3a3a5c}
+  .crow.starred{border-color:rgba(245,158,11,.35)}
+  .crow-name{font-size:14px;font-weight:600;font-family:'Space Grotesk',sans-serif}
+  .crow-name a{color:inherit;text-decoration:none}
+  .crow-name a:hover{color:#60a5fa}
+  .crow-country{font-size:12px;color:#7a7a9a;white-space:nowrap}
+  .crow-dl{font-size:12px;font-family:'Space Mono',monospace;color:#7a7a9a;white-space:nowrap}
+  .crow-dl.soon{color:#fb7185;font-weight:700}
+  @media(max-width:700px){.crow{grid-template-columns:auto 1fr auto;}.crow-country,.crow-dl{display:none}}
+
+  /* ─ TIMELINE VIEW ────────────────────────────────────────── */
+  .tl-group{margin-bottom:28px}
+  .tl-month{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;color:#7c3aed;text-transform:uppercase;padding:5px 0;border-bottom:1px solid #2a2a45;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .tl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:10px}
+
+  /* ─ MY ROUTE panel ───────────────────────────────────────── */
+  #cal-route-panel{display:none;background:#12121e;border:1px solid #2a2a45;border-radius:12px;padding:20px;margin-bottom:20px}
+  #cal-route-panel.open{display:block}
+  #cal-route-panel h3{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;margin:0 0 14px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .route-entry{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #1e1e32;font-size:14px}
+  .route-entry:last-child{border-bottom:none}
+  .route-rm{background:none;border:none;cursor:pointer;color:#7a7a9a;font-size:16px;padding:0 2px;transition:color .15s;line-height:1}
+  .route-rm:hover{color:#fb7185}
+  #cal-route-empty{color:#7a7a9a;font-size:14px;text-align:center;padding:12px 0}
+
+  /* ─ Action bar ───────────────────────────────────────────── */
+  #cal-actions{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;align-items:center}
+  .alink{display:inline-flex;align-items:center;gap:5px;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;font-family:'Space Grotesk',sans-serif;cursor:pointer;border:1px solid #2a2a45;background:transparent;color:#c4c4dc;transition:all .15s;white-space:nowrap}
+  .alink:hover{border-color:#3a3a5c;color:#f8f8ff}
+  .route-toggle{display:inline-flex;align-items:center;gap:5px;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;font-family:'Space Grotesk',sans-serif;cursor:pointer;border:1px solid #6d28d9;background:rgba(109,40,217,.12);color:#a78bfa;transition:all .15s;white-space:nowrap}
+  .route-toggle:hover{background:rgba(109,40,217,.2)}
+  .cb-label{display:flex;align-items:center;gap:6px;font-size:13px;color:#c4c4dc;cursor:pointer;white-space:nowrap;padding:7px 12px;border:1px solid #2a2a45;border-radius:8px}
+  .cb-label:has(input:checked){border-color:#6d28d9;background:rgba(109,40,217,.1)}
+  .cb-label input{width:14px;height:14px;accent-color:#6d28d9}
+
+  /* ─ Empty state ──────────────────────────────────────────── */
+  .cal-empty{text-align:center;padding:56px 24px;color:#7a7a9a;font-size:16px}
+  .cal-empty big{font-size:40px;display:block;margin-bottom:12px}
+  </style>
+
+  <section id="cal">
+    <div class="cw">
+
+      <!-- ── Header ── -->
+      <div class="eyebrow">11 — Calendario de Festivales</div>
+      <h2>Encuentra tu próximo festival</h2>
+      <p class="lead">72 festivales verificados. Filtra por técnica, región o categoría, marca favoritos y construye tu ruta personalizada.</p>
+
+      <!-- ── Urgency strip — próximos deadlines ── -->
+      <div id="cal-urgent"></div>
+
+      <!-- ── Action bar ── -->
+      <div id="cal-actions">
+        <button class="route-toggle" onclick="toggleRoutePanel()">⭐ Mi ruta (<span id="rc-count">0</span>)</button>
+        <button class="alink" onclick="calExportCSV()">↓ CSV</button>
+        <button class="alink" onclick="window.print()">↓ PDF</button>
+        <label class="cb-label"><input type="checkbox" id="cb-starred" onchange="calRender()"> Solo favoritos</label>
+        <label class="cb-label"><input type="checkbox" id="cb-open" onchange="calRender()"> Solo abiertos</label>
+        <label class="cb-label"><input type="checkbox" id="cb-student" onchange="calRender()"> Con categoría student</label>
+      </div>
+
+      <!-- ── My route panel ── -->
+      <div id="cal-route-panel">
+        <h3>Mi ruta personalizada <button onclick="toggleRoutePanel()" style="background:none;border:none;cursor:pointer;color:#7a7a9a;font-size:18px;padding:0;line-height:1">✕</button></h3>
+        <div id="cal-route-list"><p id="cal-route-empty">Agrega festivales con el botón + en cada card.</p></div>
+        <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+          <button class="alink" onclick="exportRouteTXT()" style="border-color:#6d28d9;color:#a78bfa">↓ Exportar mi ruta .TXT</button>
+          <button class="alink" onclick="exportRouteCSV()">↓ Exportar .CSV</button>
+        </div>
+      </div>
+
+      <!-- ── Toolbar: search + view tabs ── -->
+      <div id="cal-toolbar">
+        <input class="cal-search" id="cal-q" placeholder="Buscar festival, país, categoría…" oninput="calRender()">
+        <button class="vtab on" id="vt-grid"     onclick="setV('grid')">⊞ Grid</button>
+        <button class="vtab"     id="vt-list"     onclick="setV('list')">☰ Lista</button>
+        <button class="vtab"     id="vt-timeline" onclick="setV('timeline')">⏱ Timeline</button>
+      </div>
+
+      <!-- ── Filter chips ── -->
+      <div id="cal-filters"></div>
+
+      <!-- ── Stats row ── -->
+      <div id="cal-stats">
+        <div class="cstat"><strong id="cs-total">—</strong>festivales</div>
+        <div class="cstat"><strong id="cs-open">—</strong>abiertos</div>
+        <div class="cstat"><strong id="cs-student">—</strong>con student</div>
+        <div class="cstat"><strong id="cs-free">—</strong>gratuitos</div>
+        <div class="cstat"><strong id="cs-route">0</strong>en mi ruta</div>
+      </div>
+
+      <!-- ── Main output ── -->
+      <div id="cal-out"></div>
+
+    </div>
+  </section>
+
+  <script>
+  (function(){
+  'use strict';
+
+  /* ─────────────────────────────────────────── DATA ─── */
+  var FESTS = [
+    {id:1,  n:"Annecy IAFF",                   co:"🇫🇷 Francia",    ci:"Annecy",        cat:"Animación",    tags:["2D","3D","Experimental"],          lv:"S",status:"check", dl:"31 ene",      month:6,  fee:"€25-35",  st:true,  url:"https://www.annecyfestival.com/en/take-part/submit-film",              note:"El festival de animación más importante del mundo. Categoría student. Premiere mundial recomendada."},
+    {id:2,  n:"Animafest Zagreb",               co:"🇭🇷 Croacia",    ci:"Zagreb",        cat:"Animación",    tags:["2D","3D","Experimental"],          lv:"S",status:"check", dl:"variable",    month:6,  fee:"€20-30",  st:true,  url:"https://www.animafest.hr/en/2026/take_part/submissions_2026",          note:"Uno de los 4 grandes mundiales. Sección expanded animation para trabajo experimental."},
+    {id:3,  n:"OIAF Ottawa",                    co:"🇨🇦 Canadá",     ci:"Ottawa",        cat:"Animación",    tags:["2D","3D","Experimental"],          lv:"S",status:"check", dl:"feb-mar",     month:9,  fee:"$25 CAD", st:true,  url:"https://animationfestival.ca",                                        note:"Ottawa Int'l Animation Festival. Sección student muy activa. Tiene industria y mercado."},
+    {id:4,  n:"Hiroshima Animation Season",     co:"🇯🇵 Japón",      ci:"Hiroshima",     cat:"Animación",    tags:["2D","3D","Experimental"],          lv:"S",status:"check", dl:"variable",    month:8,  fee:"¥3000",   st:false, url:"https://hiroanim.org",                                                 note:"Festival bianual. Uno de los más respetados en Asia. Fuerte en animación experimental."},
+    {id:5,  n:"Stuttgart ITFS",                 co:"🇩🇪 Alemania",   ci:"Stuttgart",     cat:"Animación",    tags:["2D","3D","Experimental"],          lv:"A",status:"check", dl:"nov-dic",     month:4,  fee:"€20",     st:true,  url:"https://itfs.de",                                                     note:"International Trickfilm Festival Stuttgart. Sección estudiantil con premios en efectivo."},
+    {id:6,  n:"Fantoche",                       co:"🇨🇭 Suiza",      ci:"Baden",         cat:"Animación",    tags:["2D","3D","Experimental"],          lv:"A",status:"check", dl:"variable",    month:9,  fee:"CHF25",   st:true,  url:"https://fantoche.ch",                                                 note:"Festival suizo de referencia. Alta calidad de selección. Fee waiver disponible."},
+    {id:7,  n:"GLAS Animation Festival",        co:"🇺🇸 EUA",        ci:"Oakland CA",    cat:"Animación",    tags:["Experimental","2D"],               lv:"A",status:"check", dl:"variable",    month:3,  fee:"$15-25",  st:true,  url:"https://glasanimation.com",                                            note:"Fuerte en animación experimental e independiente. Muy abierto a trabajo de autor."},
+    {id:8,  n:"Animest Bucharest",              co:"🇷🇴 Rumania",    ci:"Bucharest",     cat:"Animación",    tags:["2D","3D"],                         lv:"B",status:"check", dl:"jun-jul",     month:10, fee:"€15",     st:true,  url:"https://animest.ro",                                                  note:"Importante festival europeo en crecimiento. Buena tasa de selección."},
+    {id:9,  n:"Anifilm",                        co:"🇨🇿 Chequia",    ci:"Třeboň",        cat:"Animación",    tags:["2D","3D","Experimental"],          lv:"B",status:"check", dl:"ene-feb",     month:5,  fee:"€15",     st:true,  url:"https://anifilm.cz",                                                  note:"Festival checo consolidado. Sección estudiantil activa."},
+    {id:10, n:"Anima Mundi",                    co:"🇧🇷 Brasil",     ci:"Río / São Paulo",cat:"Animación",    tags:["2D","3D","Latinoamérica"],          lv:"A",status:"check", dl:"variable",    month:10, fee:"gratis",  st:true,  url:"https://animamundi.com.br",                                            note:"El festival de animación más importante de Brasil y LATAM. Gratuito para estudiantes."},
+    {id:11, n:"SIGGRAPH Computer Animation",    co:"🇺🇸 EUA",        ci:"Variable",      cat:"Arte Digital", tags:["3D","Arte Digital"],               lv:"S",status:"check", dl:"ene-feb",     month:8,  fee:"variable",st:false, url:"https://s2025.siggraph.org",                                          note:"Referente mundial para CGI, VFX y realtime. Indispensable para 3D técnico."},
+    {id:12, n:"Student Academy Awards (AMPAS)", co:"🇺🇸 EUA",        ci:"Los Angeles",   cat:"Estudiantil",  tags:["Estudiantil","2D","3D"],           lv:"S",status:"open",  dl:"variable",    month:10, fee:"gratis",  st:true,  url:"https://www.oscars.org/student-academy-awards",                        note:"COMPLETAMENTE GRATUITO. Sin excusa para no inscribir. Categoría animación. Los Student Oscars."},
+    {id:13, n:"FMX Festival",                   co:"🇩🇪 Alemania",   ci:"Stuttgart",     cat:"Estudiantil",  tags:["3D","Arte Digital","Estudiantil"], lv:"A",status:"check", dl:"ene",         month:5,  fee:"variable",st:true,  url:"https://fmx.de",                                                      note:"Conferencia de VFX, animación y juegos. Sección student talentosa. Industria técnica."},
+    {id:14, n:"Pixelatl",                       co:"🇲🇽 México",     ci:"Guadalajara",   cat:"Animación",    tags:["Estudiantil","Latinoamérica","2D","3D"],lv:"A",status:"open",dl:"variable",  month:10, fee:"$15-25",  st:true,  url:"https://pixelatl.com",                                                note:"Festival de animación más importante de México. Industria, pitches, reclutamiento. PRIORIDAD LAED."},
+    {id:15, n:"Shorts México",                  co:"🇲🇽 México",     ci:"CDMX",          cat:"Cine",         tags:["2D","3D","México"],                lv:"B",status:"check", dl:"variable",    month:7,  fee:"$10-20",  st:true,  url:"https://shortsmexico.com",                                             note:"Festival de cortometrajes más importante de México. Categoría animación activa."},
+    {id:16, n:"FICM Morelia",                   co:"🇲🇽 México",     ci:"Morelia",       cat:"Cine",         tags:["2D","3D","México"],                lv:"A",status:"check", dl:"variable",    month:10, fee:"$10-20",  st:false, url:"https://imcine.gob.mx/nota.php?id=272",                                note:"Festival Internacional de Cine de Morelia. Sección animación con buena visibilidad."},
+    {id:17, n:"CutOut Fest",                    co:"🇲🇽 México",     ci:"Querétaro",     cat:"Animación",    tags:["2D","Arte Digital","México"],      lv:"B",status:"check", dl:"variable",    month:9,  fee:"gratis",  st:true,  url:"https://cutoutfest.com",                                               note:"Festival de diseño y animación de Querétaro. Gratis. Excelente para motion design y 2D."},
+    {id:18, n:"FICMA",                          co:"🇲🇽 México",     ci:"CDMX",          cat:"Cine",         tags:["México","Experimental"],           lv:"B",status:"check", dl:"variable",    month:11, fee:"variable",st:false, url:"https://ficmafest.org/",                                               note:"Festival de cine de CDMX. Sección animación activa. Comunidad de cine independiente."},
+    {id:19, n:"FICCUNAM",                       co:"🇲🇽 México",     ci:"CDMX",          cat:"Cine",         tags:["Estudiantil","México","2D","3D"],  lv:"B",status:"check", dl:"variable",    month:10, fee:"gratis",  st:true,  url:"https://ficcunam.unam.mx",                                             note:"Festival universitario de la UNAM. Ideal para primeras selecciones. Gratis y bien valorado."},
+    {id:20, n:"Animasivo",                      co:"🇲🇽 México",     ci:"CDMX",          cat:"Animación",    tags:["Experimental","Arte Digital","México"],lv:"B",status:"check",dl:"variable",  month:6,  fee:"gratis",  st:true,  url:"",                                                                    note:"Festival de videoarte y animación experimental. Ideal para proyectos no narrativos."},
+    {id:21, n:"Festival Icónica",               co:"🇲🇽 México",     ci:"Monterrey NL",  cat:"Estudiantil",  tags:["Estudiantil","México","2D","3D"],  lv:"C",status:"open",  dl:"variable",    month:11, fee:"gratis",  st:true,  url:"",                                                                    note:"Festival local de Monterrey. Ideal como primera selección. Comunidad local LAED UDEM."},
+    {id:22, n:"Quirino Awards",                 co:"🌎 Iberoamérica",ci:"Variable",      cat:"Animación",    tags:["Latinoamérica","2D","3D"],          lv:"A",status:"check", dl:"ene-feb",     month:4,  fee:"€15",     st:false, url:"https://quirino.net",                                                  note:"Los premios de la animación iberoamericana. Equivalente al Oscar de la animación LATAM."},
+    {id:23, n:"Chilemonos",                     co:"🇨🇱 Chile",      ci:"Santiago",      cat:"Animación",    tags:["Latinoamérica","2D","3D","Estudiantil"],lv:"B",status:"check",dl:"variable", month:11, fee:"gratis",  st:true,  url:"https://chilemonos.cl",                                                note:"Festival de animación de Chile. Gratis. Comunidad latinoamericana. Categoría estudiantil."},
+    {id:24, n:"BAFICI",                         co:"🇦🇷 Argentina",  ci:"Buenos Aires",  cat:"Cine",         tags:["Latinoamérica","Experimental"],    lv:"A",status:"check", dl:"variable",    month:4,  fee:"$15-25",  st:false, url:"https://bafici.gob.ar",                                                note:"Buenos Aires Festival Internacional de Cine Independiente. Sección animación artística."},
+    {id:25, n:"SANFIC",                         co:"🇨🇱 Chile",      ci:"Santiago",      cat:"Cine",         tags:["Latinoamérica","Estudiantil"],     lv:"B",status:"check", dl:"variable",    month:8,  fee:"$10-20",  st:false, url:"https://sanfic.com",                                                  note:"Santiago Festival Internacional de Cine. Buena visibilidad en cono sur."},
+    {id:26, n:"animaCor",                       co:"🇨🇴 Colombia",   ci:"Cali",          cat:"Animación",    tags:["Latinoamérica","Estudiantil","2D"],lv:"B",status:"check", dl:"variable",    month:10, fee:"gratis",  st:true,  url:"",                                                                    note:"Festival de animación colombiano. Muy activo en red latinoamericana. Gratis para estudiantes."},
+    {id:27, n:"LALIFF",                         co:"🇺🇸 EUA",        ci:"Los Angeles",   cat:"Cine",         tags:["Latinoamérica"],                   lv:"B",status:"check", dl:"variable",    month:10, fee:"variable",st:false, url:"https://laliff.org",                                                  note:"Latin American Int'l Film Festival en Los Angeles. Visibilidad para cine latinoamericano."},
+    {id:28, n:"Anima Madrid",                   co:"🇪🇸 España",     ci:"Madrid",        cat:"Animación",    tags:["Latinoamérica","2D","3D"],          lv:"B",status:"check", dl:"variable",    month:4,  fee:"€15-20",  st:true,  url:"https://animamadrid.com",                                              note:"Festival de animación de Madrid. Puerta de entrada al mercado español y europeo."},
+    {id:29, n:"Sundance Film Festival",         co:"🇺🇸 EUA",        ci:"Park City UT",  cat:"Cine",         tags:["Experimental"],                    lv:"S",status:"check", dl:"ago-sep",     month:1,  fee:"$60-85",  st:false, url:"https://www.sundance.org",                                             note:"Festival de cine independiente más importante de EUA. Animación en sección shorts."},
+    {id:30, n:"Berlinale Shorts",               co:"🇩🇪 Alemania",   ci:"Berlín",        cat:"Cine",         tags:["Experimental"],                    lv:"S",status:"check", dl:"oct-nov",     month:2,  fee:"gratis",  st:false, url:"https://www.berlinale.de",                                             note:"Berlinale Short Film Competition. Uno de los más selectivos. Gratuito para inscribir."},
+    {id:31, n:"Edinburgh International FF",     co:"🇬🇧 UK",         ci:"Edinburgh",     cat:"Cine",         tags:["Experimental"],                    lv:"A",status:"check", dl:"variable",    month:8,  fee:"£10-20",  st:true,  url:"https://edfilmfest.org.uk",                                            note:"Festival más antiguo del mundo. Activo en animación experimental. Categoría student."},
+    {id:32, n:"Ars Electronica Festival",       co:"🇦🇹 Austria",    ci:"Linz",          cat:"Arte Digital", tags:["Arte Digital","Experimental"],     lv:"A",status:"check", dl:"variable",    month:9,  fee:"variable",st:true,  url:"https://ars.electronica.art",                                         note:"El festival de arte y tecnología más importante del mundo. Prix Ars Electronica."},
+    {id:33, n:"Transmediale",                   co:"🇩🇪 Alemania",   ci:"Berlín",        cat:"Arte Digital", tags:["Arte Digital","Experimental"],     lv:"A",status:"check", dl:"variable",    month:2,  fee:"variable",st:false, url:"https://transmediale.de",                                              note:"Festival de cultura digital y arte de medios. Ideal para animación experimental."},
+    {id:34, n:"MUTEK México",                   co:"🇲🇽 México",     ci:"CDMX",          cat:"Arte Digital", tags:["Arte Digital","Experimental","México"],lv:"B",status:"open",dl:"variable",  month:8,  fee:"variable",st:false, url:"https://mx.mutek.org",                                                note:"Festival de música electrónica y arte digital. VJ sets, instalaciones y proyectos audiovisuales."},
+    {id:35, n:"FILE Festival Brasil",           co:"🇧🇷 Brasil",     ci:"São Paulo",     cat:"Arte Digital", tags:["Arte Digital","Experimental","Latinoamérica"],lv:"B",status:"check",dl:"variable",month:7,fee:"gratis",st:true,url:"https://file.org.br",                                                note:"Electronic Language International Festival. Arte digital, interactivo y experimental."},
+    {id:36, n:"IndieCade",                      co:"🇺🇸 EUA",        ci:"Los Angeles",   cat:"Videojuegos",  tags:["Videojuegos","Arte Digital"],       lv:"A",status:"check", dl:"variable",    month:10, fee:"$95-125", st:false, url:"https://indiecade.com",                                                note:"El festival de videojuegos independientes más importante. Para game art y diseño de juegos."},
+    {id:37, n:"A MAZE. Berlin",                 co:"🇩🇪 Alemania",   ci:"Berlín",        cat:"Videojuegos",  tags:["Videojuegos","Arte Digital"],       lv:"B",status:"check", dl:"variable",    month:5,  fee:"€15-30",  st:true,  url:"https://amaze-berlin.de",                                              note:"Festival de juegos independientes y arte interactivo. Abierto a game art experimental."},
+    {id:38, n:"Festival of Animation Berlin",   co:"🇩🇪 Alemania",   ci:"Berlín",        cat:"Animación",    tags:["2D","3D","Experimental"],           lv:"B",status:"check", dl:"variable",    month:8,  fee:"gratis",  st:true,  url:"https://www.zippyframes.com/festivals/next-festivals/festival-of-animation-berlin",note:"Festival de animación de Berlín. Gratuito. Accesible para primeras inscripciones internacionales."},
+    {id:39, n:"Anima Latina Festival",          co:"🇦🇷 Argentina",  ci:"Buenos Aires",  cat:"Animación",    tags:["Latinoamérica","2D","3D"],          lv:"C",status:"check", dl:"variable",    month:5,  fee:"gratis",  st:true,  url:"https://filmfreeway.com/animalatinafestival",                          note:"Festival de animación latinoamericana. Gratuito. Buena visibilidad regional."},
+    {id:40, n:"Imaginaria",                     co:"🇮🇹 Italia",     ci:"Conversano",    cat:"Animación",    tags:["2D","3D"],                         lv:"B",status:"check", dl:"variable",    month:7,  fee:"gratis",  st:true,  url:"https://filmfreeway.com/Imaginaria",                                   note:"Festival italiano de animación. Gratuito. Plataforma para visibilidad en Europa mediterránea."},
+    {id:41, n:"AniMaji",                        co:"🇺🇸 EUA",        ci:"New York",      cat:"Animación",    tags:["3D"],                              lv:"C",status:"check", dl:"variable",    month:6,  fee:"$8",      st:true,  url:"https://filmfreeway.com/AniMaji",                                      note:"Festival de NY especializado en animación 3D. Fee muy accesible. Primeras inscripciones EUA."},
+    {id:42, n:"AIMAFF",                         co:"🌐 Europa",      ci:"Online/Variable",cat:"Animación",   tags:["2D","3D"],                         lv:"C",status:"check", dl:"variable",    month:0,  fee:"gratis",  st:true,  url:"https://www.aimaff.eu/",                                               note:"Festival europeo de animación. Competencia online. Accesible y válido como crédito."},
+    {id:43, n:"Annie Awards",                   co:"🇺🇸 EUA",        ci:"Los Angeles",   cat:"Animación",    tags:["2D","3D"],                         lv:"S",status:"check", dl:"oct-nov",     month:2,  fee:"variable",st:false, url:"https://annieawards.org",                                              note:"Los premios más importantes de la industria de animación. Categorías estudiantiles."},
+    {id:44, n:"FICUVAQ",                        co:"🇲🇽 México",     ci:"Morelia",       cat:"Estudiantil",  tags:["Estudiantil","México"],            lv:"C",status:"check", dl:"variable",    month:3,  fee:"$4",      st:true,  url:"https://filmfreeway.com/FICUVAQ",                                      note:"Festival universitario UVAQ de Morelia. Ideal para primeras participaciones. Fee muy bajo."},
+    {id:45, n:"Canada Shorts",                  co:"🇨🇦 Canadá",     ci:"Vancouver",     cat:"Cine",         tags:[],                                  lv:"B",status:"check", dl:"variable",    month:0,  fee:"$45-50",  st:true,  url:"https://filmfreeway.com/CanadaShorts",                                 note:"Festival canadiense de cortometrajes. Plataforma para acceso al mercado de habla inglesa."},
+    {id:46, n:"Indy Shorts International",      co:"🇺🇸 EUA",        ci:"Indianapolis",  cat:"Cine",         tags:[],                                  lv:"B",status:"check", dl:"variable",    month:7,  fee:"$36-76",  st:true,  url:"https://filmfreeway.com/HeartlandFilmIndyShorts",                      note:"Festival de cortometrajes de Indiana. Bien establecido. Categoría animación activa."},
+    {id:47, n:"Trasylvania Shorts",             co:"🇷🇴 Rumania",    ci:"Cluj-Napoca",   cat:"Cine",         tags:[],                                  lv:"C",status:"open",  dl:"variable",    month:4,  fee:"€22",     st:true,  url:"https://filmfreeway.com/TRANSILVANIASHORTS",                           note:"Festival de cortometrajes de Rumania. Creciente en el circuito europeo."},
+    {id:48, n:"Reykjavik International FF",     co:"🇮🇸 Islandia",   ci:"Reykjavik",     cat:"Cine",         tags:["Experimental"],                    lv:"B",status:"check", dl:"variable",    month:10, fee:"variable",st:true,  url:"https://riff.is",                                                     note:"Festival de cine de Islandia. Fuerte en animación experimental y arte de vanguardia."},
+    {id:49, n:"Mecal Barcelona",                co:"🇪🇸 España",     ci:"Barcelona",     cat:"Animación",    tags:["Latinoamérica","2D","3D"],          lv:"B",status:"check", dl:"variable",    month:3,  fee:"variable",st:true,  url:"https://mecalbcn.org",                                                 note:"Festival internacional en Barcelona. Puerta al mercado español."},
+    {id:50, n:"Muestra de Cine UDEM",           co:"🇲🇽 México",     ci:"Monterrey NL",  cat:"Estudiantil",  tags:["Estudiantil","México"],            lv:"C",status:"open",  dl:"variable",    month:5,  fee:"gratis",  st:true,  url:"",                                                                    note:"Muestra interna UDEM. Primer paso antes de festivales externos. Crédito institucional."},
+    {id:51, n:"Festival Corto Monterrey",       co:"🇲🇽 México",     ci:"Monterrey NL",  cat:"Estudiantil",  tags:["Estudiantil","México"],            lv:"C",status:"open",  dl:"variable",    month:11, fee:"gratis",  st:true,  url:"",                                                                    note:"Festival local de Monterrey. Comunidad AED LAED UDEM muy presente."},
+    {id:52, n:"Shorts NL",                      co:"🇲🇽 México",     ci:"Nuevo León",    cat:"Estudiantil",  tags:["Estudiantil","México"],            lv:"C",status:"open",  dl:"variable",    month:9,  fee:"gratis",  st:true,  url:"",                                                                    note:"Festival de cortometrajes de Nuevo León. Gratis. Excelente para alumnos LAED UDEM."},
+    {id:53, n:"La Muestra UNAM",                co:"🇲🇽 México",     ci:"CDMX",          cat:"Cine",         tags:["Estudiantil","México"],            lv:"B",status:"check", dl:"variable",    month:7,  fee:"gratis",  st:true,  url:"https://lamuestra.unam.mx",                                            note:"Muestra de Cine de la UNAM. Muy buena para primera visibilidad universitaria nacional."},
+    {id:54, n:"Distrital CDMX",                 co:"🇲🇽 México",     ci:"CDMX",          cat:"Cine",         tags:["México","Experimental"],           lv:"B",status:"check", dl:"variable",    month:6,  fee:"$5-15",   st:true,  url:"",                                                                    note:"Festival de Cine de CDMX. Fuerte en cine y animación independiente urbana."},
+    {id:55, n:"Pixel Art Festival",             co:"🇲🇽 México",     ci:"CDMX",          cat:"Arte Digital", tags:["Arte Digital","México","2D"],      lv:"C",status:"open",  dl:"variable",    month:9,  fee:"gratis",  st:true,  url:"",                                                                    note:"Festival de pixel art y arte digital. Perfecto para proyectos 2D con estética digital."},
+    {id:56, n:"Ojo de Pescado",                 co:"🇨🇱 Chile",      ci:"Santiago",      cat:"Animación",    tags:["Latinoamérica","Estudiantil"],     lv:"B",status:"check", dl:"variable",    month:8,  fee:"gratis",  st:true,  url:"",                                                                    note:"Festival infantil y familiar de animación en Chile. Ideal para cortos dirigidos a niños."},
+    {id:57, n:"Sunderland Shorts",              co:"🇬🇧 UK",         ci:"Sunderland",    cat:"Cine",         tags:["Experimental"],                    lv:"C",status:"check", dl:"variable",    month:5,  fee:"gratis",  st:true,  url:"https://sunderlandshorts.co.uk/",                                      note:"Festival de cortometrajes del NE de Inglaterra. Gratuito. Buena introducción al circuito UK."},
+    {id:58, n:"Austin Film Festival",           co:"🇺🇸 EUA",        ci:"Austin TX",     cat:"Cine",         tags:[],                                  lv:"B",status:"check", dl:"variable",    month:10, fee:"$60-90",  st:false, url:"https://filmfreeway.com/AustinFilmFestival",                           note:"Festival con fuerte programación de cortometrajes y animación. Buen networking en EUA."},
+    {id:59, n:"San Francisco Int'l Animation",  co:"🇺🇸 EUA",        ci:"San Francisco", cat:"Animación",    tags:["2D","3D","Experimental"],          lv:"B",status:"check", dl:"variable",    month:10, fee:"variable",st:true,  url:"https://sifafilmawards.com/",                                         note:"Festival de animación de San Francisco. Presencia de estudios de la Bahía."},
+    {id:60, n:"Montreal Int'l Animation",       co:"🇨🇦 Canadá",     ci:"Montreal",      cat:"Animación",    tags:["2D","3D"],                         lv:"B",status:"check", dl:"variable",    month:10, fee:"variable",st:true,  url:"",                                                                    note:"Festival de animación de Montreal. Ciudad francófona. Contacto con animación canadiense."},
+    {id:61, n:"Annecy Contrechamp",             co:"🇫🇷 Francia",    ci:"Annecy",        cat:"Animación",    tags:["Experimental"],                    lv:"A",status:"check", dl:"ene",         month:6,  fee:"€25",     st:false, url:"https://www.annecyfestival.com",                                       note:"Sección de Annecy para trabajos más experimentales y de autor."},
+    {id:62, n:"CRAFT Int'l Animation",          co:"🇮🇩 Indonesia",  ci:"Yogyakarta",    cat:"Animación",    tags:["2D","3D"],                         lv:"C",status:"check", dl:"variable",    month:7,  fee:"gratis",  st:true,  url:"https://filmfreeway.com/CRAFTInternationalAnimationFestival",          note:"Festival de animación en Indonesia. Gratuito. Acceso a audiencia asiática."},
+    {id:63, n:"Cannes Indie Short Awards",      co:"🇫🇷 Francia",    ci:"Cannes",        cat:"Cine",         tags:[],                                  lv:"C",status:"open",  dl:"variable",    month:6,  fee:"gratis",  st:true,  url:"https://filmfreeway.com/INDIESHORTSAWARDSCANNES",                      note:"Competencia indie paralela a Cannes. Gratuita. No confundir con competencia oficial."},
+    {id:64, n:"Laboratorio Arte Alameda",       co:"🇲🇽 México",     ci:"CDMX",          cat:"Arte Digital", tags:["Arte Digital","Experimental","México"],lv:"B",status:"check",dl:"variable", month:0,  fee:"gratis",  st:false, url:"",                                                                    note:"Espacio de arte digital del INBAL en CDMX. Exhibición de instalaciones y media art."},
+    {id:65, n:"ArtStation Community Showcase",  co:"🌐 Online",      ci:"Online",        cat:"Arte Digital", tags:["Arte Digital","3D","Videojuegos"], lv:"B",status:"open",  dl:"—",           month:0,  fee:"gratis",  st:true,  url:"https://artstation.com",                                               note:"No es festival pero crucial para 3D/VFX. Subir breakdowns y renders finales."},
+    {id:66, n:"Vimeo Staff Picks",              co:"🌐 Online",      ci:"Online",        cat:"Arte Digital", tags:["Arte Digital","Experimental","2D","3D"],lv:"A",status:"open",dl:"—",        month:0,  fee:"gratis",  st:true,  url:"https://vimeo.com/staffpicks",                                        note:"Una selección de Vimeo Staff Picks tiene el alcance de un festival B. Subir con calidad óptima."},
+    {id:67, n:"TIFF (Toronto)",                 co:"🇨🇦 Canadá",     ci:"Toronto",       cat:"Cine",         tags:["Experimental"],                    lv:"S",status:"check", dl:"variable",    month:9,  fee:"variable",st:false, url:"https://tiff.net",                                                    note:"Toronto International Film Festival. Sección cortometrajes activa. Muy difícil de seleccionar."},
+    {id:68, n:"Marbella Int'l Film Festival",   co:"🇪🇸 España",     ci:"Marbella",      cat:"Cine",         tags:["Latinoamérica"],                   lv:"B",status:"check", dl:"variable",    month:10, fee:"variable",st:true,  url:"",                                                                    note:"Festival en España con fuerte programación iberoamericana. Buena plataforma en Europa."},
+    {id:69, n:"A Maze. Berlin",                 co:"🇩🇪 Alemania",   ci:"Berlín",        cat:"Videojuegos",  tags:["Videojuegos","Arte Digital"],       lv:"B",status:"check", dl:"variable",    month:5,  fee:"€15-30",  st:true,  url:"https://amaze-berlin.de",                                              note:"Festival de juegos independientes y arte interactivo en Berlín."},
+    {id:70, n:"Starling Film Festival",         co:"🇬🇧 UK",         ci:"Wallasey",      cat:"Cine",         tags:[],                                  lv:"C",status:"check", dl:"variable",    month:11, fee:"£6-12",   st:true,  url:"https://filmfreeway.com/Starling-Film-Festival",                       note:"Festival pequeño del norte de UK. Fee muy bajo. Introducción al circuito UK."},
+    {id:71, n:"Cannes La Cinef",                co:"🇫🇷 Francia",    ci:"Cannes",        cat:"Estudiantil",  tags:["Estudiantil"],                     lv:"S",status:"check", dl:"ene-feb",     month:5,  fee:"gratis",  st:true,  url:"https://www.festival-cannes.com",                                      note:"Sección estudiantil de Cannes. Solo para films producidos dentro de instituciones educativas."},
+    {id:72, n:"Mecal Barcelona",                co:"🇪🇸 España",     ci:"Barcelona",     cat:"Animación",    tags:["Latinoamérica","2D","3D"],          lv:"B",status:"check", dl:"variable",    month:3,  fee:"variable",st:true,  url:"https://mecalbcn.org",                                                 note:"Festival internacional en Barcelona. Puerta al mercado español."},
+  ];
+
+  /* ─────────────────────────────────────────── FILTER CONFIG ─── */
+  var FILTERS = [
+    {k:'todo',  l:'Todos',         c:'#7c3aed'},
+    {k:'2D',    l:'2D',            c:'#7c3aed'},
+    {k:'3D',    l:'3D',            c:'#2563eb'},
+    {k:'Experimental',l:'Experimental',c:'#f43f5e'},
+    {k:'Arte Digital', l:'Arte Digital',c:'#f59e0b'},
+    {k:'Videojuegos',  l:'Videojuegos', c:'#10b981'},
+    {k:'Estudiantil',  l:'Estudiantil', c:'#34d399'},
+    {k:'Latinoamérica',l:'LATAM',       c:'#60a5fa'},
+    {k:'México',       l:'México',      c:'#fb7185'},
+  ];
+
+  var LV = {S:'#f43f5e',A:'#f59e0b',B:'#60a5fa',C:'#a78bfa'};
+  var LV_BG = {S:'rgba(244,63,94,.1)',A:'rgba(245,158,11,.1)',B:'rgba(37,99,235,.1)',C:'rgba(109,40,217,.1)'};
+
+  var TAG_C = {
+    '2D':'rgba(109,40,217,.2);color:#a78bfa',
+    '3D':'rgba(37,99,235,.2);color:#60a5fa',
+    'Experimental':'rgba(244,63,94,.2);color:#fb7185',
+    'Arte Digital':'rgba(245,158,11,.2);color:#fbbf24',
+    'Videojuegos':'rgba(16,185,129,.2);color:#34d399',
+    'Estudiantil':'rgba(16,185,129,.14);color:#34d399',
+    'Latinoamérica':'rgba(96,165,250,.14);color:#60a5fa',
+    'México':'rgba(244,63,94,.14);color:#fb7185',
+  };
+
+  var ST_MAP = {
+    open: {label:'Abierto',          cls:'st-open'},
+    close:{label:'Cerrado',          cls:'st-close'},
+    soon: {label:'Deadline próximo', cls:'st-soon'},
+    check:{label:'Ver convocatoria', cls:'st-check'},
+  };
+
+  /* ─────────────────────────────────────────── STATE ─── */
+  var S = {
+    view:'grid',
+    filters:[],
+    starred: safeJson('cal2_starred',[]),
+    route:   safeJson('cal2_route',[]),
+    routeOpen: false,
+  };
+
+  function safeJson(k,def){try{return JSON.parse(localStorage.getItem(k)||'null')||def}catch{return def}}
+  function saveState(){localStorage.setItem('cal2_starred',JSON.stringify(S.starred));localStorage.setItem('cal2_route',JSON.stringify(S.route))}
+
+  /* ─────────────────────────────────────────── INIT ─── */
+  function init(){
+    buildFilters();
+    buildUrgency();
+    calRender();
+    injectNavLink();
+  }
+
+  function injectNavLink(){
+    try{
+      var d=document.querySelector('.nav-desktop');
+      if(d&&!document.getElementById('nav-cal-btn')){
+        var b=document.createElement('button');
+        b.id='nav-cal-btn';b.className='nav-link';
+        b.style.cssText='background:none;border:none;cursor:pointer;font-family:inherit';
+        b.textContent='Calendario';
+        b.onclick=function(){document.getElementById('cal').scrollIntoView({behavior:'smooth'})};
+        d.appendChild(b);
+      }
+    }catch(e){}
+  }
+
+  /* ─────────────────────────────────────────── URGENCY STRIP ─── */
+  function buildUrgency(){
+    var el=document.getElementById('cal-urgent');
+    if(!el)return;
+    var prioritized=[
+      {id:12,when:'Gratis · Convocatoria anual'},
+      {id:14,when:'Convocatoria 2026 abierta'},
+      {id:1, when:'Deadline: enero/febrero'},
+      {id:22,when:'Deadline: enero-febrero'},
+      {id:61,when:'La Cinef · Solo estudiantes'},
+    ];
+    el.innerHTML = '<div style="font-size:11px;font-family:\'Space Mono\',monospace;color:#7a7a9a;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;width:100%">⚡ Festivales clave — revisar convocatoria ahora</div>' +
+      prioritized.map(function(p){
+        var f=FESTS.find(function(x){return x.id===p.id});
+        if(!f)return '';
+        return '<button class="urg-chip deadline" onclick="filterAndScroll('+f.id+')">'+
+          '<span class="dot" style="background:'+LV[f.lv]+'"></span>'+
+          '<span><div class="name">'+f.n+'</div><div class="when">'+p.when+'</div></span>'+
+        '</button>';
+      }).join('');
+  }
+
+  window.filterAndScroll=function(id){
+    document.getElementById('cal').scrollIntoView({behavior:'smooth'});
+  };
+
+  /* ─────────────────────────────────────────── FILTER CHIPS ─── */
+  function buildFilters(){
+    var el=document.getElementById('cal-filters');
+    if(!el)return;
+    el.innerHTML=FILTERS.map(function(f){
+      var isAll=f.k==='todo';
+      var on=(isAll&&!S.filters.length)||S.filters.indexOf(f.k)!==-1;
+      return '<button class="chip'+(on?' on':'')+'" style="'+(on?'background:'+f.c+';border-color:'+f.c+';':'')+'" onclick="toggleFilter(\''+f.k+'\')">'+f.l+'</button>';
+    }).join('');
+  }
+
+  window.toggleFilter=function(k){
+    if(k==='todo'){S.filters=[];}
+    else{var i=S.filters.indexOf(k);i===-1?S.filters.push(k):S.filters.splice(i,1);}
+    buildFilters();calRender();
+  };
+
+  /* ─────────────────────────────────────────── VIEW ─── */
+  window.setV=function(v){
+    S.view=v;
+    ['grid','list','timeline'].forEach(function(k){
+      var b=document.getElementById('vt-'+k);
+      if(b)b.className='vtab'+(k===v?' on':'');
+    });
+    calRender();
+  };
+
+  /* ─────────────────────────────────────────── STAR / ROUTE ─── */
+  window.toggleStar=function(id,e){
+    if(e){e.stopPropagation();}
+    var i=S.starred.indexOf(id);i===-1?S.starred.push(id):S.starred.splice(i,1);
+    saveState();calRender();
+  };
+
+  window.toggleRoute=function(id,e){
+    if(e){e.stopPropagation();}
+    var i=S.route.indexOf(id);i===-1?S.route.push(id):S.route.splice(i,1);
+    saveState();calRender();renderRoutePanel();
+  };
+
+  window.toggleRoutePanel=function(){
+    S.routeOpen=!S.routeOpen;
+    var p=document.getElementById('cal-route-panel');
+    if(p)p.className='cal-route-panel'+(S.routeOpen?' open':'');
+    renderRoutePanel();calRender();
+  };
+
+  function renderRoutePanel(){
+    var el=document.getElementById('cal-route-list');
+    if(!el)return;
+    var items=FESTS.filter(function(f){return S.route.indexOf(f.id)!==-1});
+    if(!items.length){el.innerHTML='<p id="cal-route-empty">Agrega festivales con el botón + en cada card.</p>';return;}
+    el.innerHTML=items.map(function(f){
+      return '<div class="route-entry">'+
+        '<span class="lbadge" style="background:'+LV_BG[f.lv]+';color:'+LV[f.lv]+'">'+f.lv+'</span>'+
+        '<span style="flex:1;font-size:14px;font-weight:600">'+f.n+'</span>'+
+        '<span style="font-size:11px;color:#7a7a9a;font-family:\'Space Mono\',monospace;margin-right:8px">'+f.co+'</span>'+
+        '<button class="route-rm" onclick="toggleRoute('+f.id+')">×</button>'+
+      '</div>';
+    }).join('');
+  }
+
+  /* ─────────────────────────────────────────── FILTER ─── */
+  function getFiltered(){
+    var q=(document.getElementById('cal-q')||{}).value||'';q=q.toLowerCase();
+    var cbStar=(document.getElementById('cb-starred')||{}).checked;
+    var cbOpen=(document.getElementById('cb-open')||{}).checked;
+    var cbSt=(document.getElementById('cb-student')||{}).checked;
+    return FESTS.filter(function(f){
+      if(cbStar&&S.starred.indexOf(f.id)===-1)return false;
+      if(cbOpen&&f.status!=='open')return false;
+      if(cbSt&&!f.st)return false;
+      if(S.filters.length){
+        var m=S.filters.some(function(k){return f.tags.indexOf(k)!==-1});
+        if(!m)return false;
+      }
+      if(q){
+        var h=(f.n+' '+f.co+' '+f.ci+' '+f.cat+' '+f.tags.join(' ')).toLowerCase();
+        if(h.indexOf(q)===-1)return false;
+      }
+      return true;
+    });
+  }
+
+  /* ─────────────────────────────────────────── CARD ─── */
+  function card(f,compact){
+    var starred=S.starred.indexOf(f.id)!==-1;
+    var inRoute=S.route.indexOf(f.id)!==-1;
+    var st=ST_MAP[f.status]||ST_MAP.check;
+    var tags=f.tags.slice(0,3).map(function(t){
+      var c=TAG_C[t]||'rgba(255,255,255,.07);color:#c4c4dc';
+      return '<span class="ctag" style="background:'+c+'">'+t+'</span>';
+    }).join('');
+    var name=f.url?'<a href="'+f.url+'" target="_blank" rel="noopener noreferrer">'+f.n+' ↗</a>':f.n;
+    var dlCls=f.status==='soon'?' soon':'';
+    return '<div class="ccard'+(starred?' starred':'')+'">' +
+      '<div class="ccard-head">' +
+        '<div class="ccard-name">'+name+'</div>' +
+        '<button class="star-btn'+(starred?' on':'')+'" onclick="toggleStar('+f.id+',event)" title="Favorito">'+(starred?'★':'☆')+'</button>' +
+      '</div>' +
+      '<div class="ccard-meta">' +
+        '<span class="stpill '+st.cls+'">'+st.label+'</span>' +
+        '<span class="lbadge" style="background:'+LV_BG[f.lv]+';color:'+LV[f.lv]+'">'+f.lv+'</span>' +
+        (f.st?'<span style="font-size:11px;font-family:\'Space Mono\',monospace;background:rgba(16,185,129,.1);color:#34d399;padding:3px 8px;border-radius:4px;font-weight:600">✓ Student</span>':'') +
+      '</div>' +
+      (tags?'<div class="ccard-tags">'+tags+'</div>':'') +
+      '<div class="ccard-footer">' +
+        '<div>' +
+          '<div class="ccard-dl'+dlCls+'">Deadline: '+f.dl+'</div>' +
+          '<div style="font-size:11px;color:#7a7a9a;font-family:\'Space Mono\',monospace;margin-top:2px">'+f.co+' · '+f.fee+'</div>' +
+        '</div>' +
+        '<button class="add-btn'+(inRoute?' on':'')+'" onclick="toggleRoute('+f.id+',event)">'+(inRoute?'✓ En mi ruta':'+ Mi ruta')+'</button>' +
+      '</div>' +
+      (f.note&&!compact?'<div class="ccard-note">'+f.note+'</div>':'') +
+    '</div>';
+  }
+
+  /* ─────────────────────────────────────────── LIST ROW ─── */
+  function listRow(f){
+    var starred=S.starred.indexOf(f.id)!==-1;
+    var inRoute=S.route.indexOf(f.id)!==-1;
+    var st=ST_MAP[f.status]||ST_MAP.check;
+    var name=f.url?'<a href="'+f.url+'" target="_blank" rel="noopener noreferrer">'+f.n+' ↗</a>':f.n;
+    var dlCls=f.status==='soon'?' soon':'';
+    return '<div class="crow'+(starred?' starred':'')+'">' +
+      '<span class="lbadge" style="background:'+LV_BG[f.lv]+';color:'+LV[f.lv]+'">'+f.lv+'</span>' +
+      '<div class="crow-name">'+name+'</div>' +
+      '<span class="crow-country">'+f.co+'</span>' +
+      '<span class="stpill '+st.cls+'">'+st.label+'</span>' +
+      '<span class="crow-dl'+dlCls+'">'+f.dl+'</span>' +
+      '<button class="star-btn'+(starred?' on':'')+'" onclick="toggleStar('+f.id+',event)">'+(starred?'★':'☆')+'</button>' +
+      '<button class="add-btn'+(inRoute?' on':'')+'" onclick="toggleRoute('+f.id+',event)">'+(inRoute?'✓':'+ ruta')+'</button>' +
+    '</div>';
+  }
+
+  /* ─────────────────────────────────────────── RENDER ─── */
+  window.calRender=function(){
+    var filtered=getFiltered();
+    var out=document.getElementById('cal-out');
+    if(!out)return;
+
+    /* stats */
+    var setText=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v};
+    setText('cs-total',filtered.length);
+    setText('cs-open',filtered.filter(function(f){return f.status==='open'}).length);
+    setText('cs-student',filtered.filter(function(f){return f.st}).length);
+    setText('cs-free',filtered.filter(function(f){return f.fee==='gratis'}).length);
+    setText('cs-route',S.route.length);
+    setText('rc-count',S.route.length);
+
+    if(!filtered.length){
+      out.innerHTML='<div class="cal-empty"><big>🎬</big>No se encontraron festivales.<br><span style="font-size:13px">Intenta ampliar la búsqueda o quitar filtros.</span></div>';
+      return;
+    }
+
+    if(S.view==='grid'){
+      out.innerHTML='<div class="cal-grid">'+filtered.map(function(f){return card(f,false)}).join('')+'</div>';
+    } else if(S.view==='list'){
+      out.innerHTML='<div class="cal-list">'+filtered.map(listRow).join('')+'</div>';
+    } else {
+      /* timeline */
+      var months=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+      var groups={};
+      filtered.forEach(function(f){
+        var m=f.month;
+        if(!groups[m])groups[m]=[];
+        groups[m].push(f);
+      });
+      var keys=Object.keys(groups).sort(function(a,b){return parseInt(a)-parseInt(b)});
+      var html='';
+      keys.forEach(function(m){
+        var label=parseInt(m)===0?'Variable / Revisar convocatoria':months[parseInt(m)-1];
+        html+='<div class="tl-group"><div class="tl-month">'+label.toUpperCase()+' <span style="color:#3a3a5c;font-size:10px">('+groups[m].length+')</span></div>'+
+          '<div class="tl-grid">'+groups[m].map(function(f){return card(f,true)}).join('')+'</div></div>';
+      });
+      out.innerHTML=html;
+    }
+  };
+
+  /* ─────────────────────────────────────────── EXPORTS ─── */
+  window.calExportCSV=function(){
+    var filtered=getFiltered();
+    var hdr='Nombre,País,Ciudad,Categoría,Técnica,Nivel,Status,Deadline,Fee,Student,URL\n';
+    var rows=filtered.map(function(f){
+      return [f.n,f.co,f.ci,f.cat,f.tags.join('|'),f.lv,f.status,f.dl,f.fee,f.st?'Sí':'No',f.url||''].map(function(v){return '"'+v+'"'}).join(',');
+    }).join('\n');
+    dl('festivales-laed-udem.csv',hdr+rows,'text/csv');
+  };
+
+  window.exportRouteTXT=function(){
+    var items=FESTS.filter(function(f){return S.route.indexOf(f.id)!==-1});
+    var txt='MI RUTA DE FESTIVALES — LAED UDEM\n\n'+items.map(function(f,i){
+      return (i+1)+'. '+f.n+'\n   País: '+f.co+' · '+f.ci+'\n   Nivel: '+f.lv+' · Status: '+f.status+'\n   Deadline: '+f.dl+' · Fee: '+f.fee+'\n   '+(f.url||'—')+'\n   '+f.note;
+    }).join('\n\n');
+    dl('mi-ruta-festivales.txt',txt,'text/plain');
+  };
+
+  window.exportRouteCSV=function(){
+    var items=FESTS.filter(function(f){return S.route.indexOf(f.id)!==-1});
+    var hdr='Nombre,País,Nivel,Status,Deadline,Fee,URL\n';
+    var rows=items.map(function(f){return[f.n,f.co,f.lv,f.status,f.dl,f.fee,f.url||''].map(function(v){return '"'+v+'"'}).join(',')}).join('\n');
+    dl('mi-ruta.csv',hdr+rows,'text/csv');
+  };
+
+  function dl(name,content,type){
+    var a=Object.assign(document.createElement('a'),{href:URL.createObjectURL(new Blob([content],{type:type})),download:name});
+    a.click();
+  }
+
+  /* ─ Boot ─ */
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+  })();
+  </script>
+
+
   </body>
 </html>
